@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>微信管理后台</title>
+    <#import "/common/common.macro.ftl" as netCommon />
+    <@netCommon.commonStyle />
+</head>
+<body class="hold-transition skin-blue sidebar-mini" style="min-width:1190px;overflow: scroll">
+<div class="wrapper">
+    <!-- header -->
+    <@netCommon.commonHeader />
+    <!-- left -->
+    <@netCommon.commonLeft />
+    <link rel="stylesheet" href="${request.contextPath}/bootstrap/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="${request.contextPath}/plugins/bootstrap-table/bootstrap-table.css?v=1">
+    <link rel="stylesheet" href="${request.contextPath}/plugins/layui/css/layui.css"/>
+    <link rel="stylesheet" href="${request.contextPath}/plugins/toastr/toastr.css"/>
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+        <!-- Content Header (Page header) -->
+        <section class="content-header">
+            <h1>微信管理</h1>
+            <ol class="breadcrumb">
+                <li><a href="javascript:void(0)"><i class="fa fa-dashboard"></i>主页</a></li>
+                <li><a href="javascript:void(0)">微信管理</a></li>
+                <li class="active">聊天列表</li>
+            </ol>
+        </section>
+        <section class="content">
+            <div class="panel panel-default">
+                <div class="panel-body" style="padding-top:0">
+                    <form class="form-horizontal" style="padding:0 10px">
+                        <span>${(date!'')?string('yyyy-MM-dd HH:mm:ss')}</span>
+                    </form>
+                    <div class="box box-defalut" style="">
+                        <div class="box-header with-border">
+                             <span style="display:inline-block;padding:0 0 0 10px;">
+                                   共<span id="total">0</span>条数据
+                               </span>
+
+                            <!-- /.box-header -->
+                            <div class="box-body">
+                                <div class="table-responsive">
+                                    <table class="table" id="table"></table>
+                                </div>
+                            </div>
+                            <!-- /.box-body -->
+                            <div class="box-footer">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+<@netCommon.commonScript />
+<script src="${request.contextPath}/plugins/bootstrap-table/bootstrap-table.js?v=2"></script>
+<script src="${request.contextPath}/plugins/bootstrap-table/locale/bootstrap-table-zh-CN.js"></script>
+<script src="${request.contextPath}/plugins/toastr/toastr.min.js"></script>
+<script src="${request.contextPath}/plugins/layer/layer.js"></script>
+</div>
+</body>

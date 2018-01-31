@@ -1,0 +1,32 @@
+﻿/*  add by qiuqiu 2018/1/8 */
+.tt-menu {
+  width: 200px;
+  margin: 12px 0;
+  padding: 8px 0;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  -webkit-border-radius: 8px;
+     -moz-border-radius: 8px;
+          border-radius: 8px;
+  -webkit-box-shadow: 0 5px 10px rgba(0,0,0,.2);
+     -moz-box-shadow: 0 5px 10px rgba(0,0,0,.2);
+          box-shadow: 0 5px 10px rgba(0,0,0,.2);
+}
+
+.tt-suggestion {
+  padding: 3px 20px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color:#555;
+}
+
+.tt-suggestion:hover {
+  cursor: pointer;
+  color: #fff;
+  background-color: rgb(30,144,255);
+}
+
+.tt-suggestion.tt-cursor {
+  color: #fff;
+  background-color: rgb(30,144,255);
+}
