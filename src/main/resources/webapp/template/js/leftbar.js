@@ -1,6 +1,4 @@
-/**
- * Created by lipingfei on 2017/10/16.
- */
+
  var tableOperates = {
      //获取异常信息
      getErrorMessage: function (data) {
@@ -23,7 +21,7 @@ $(function () {
     //请求左侧导航展示栏
     $.ajax({
         type: "GET",
-        url: "/backend/sys/get_user_module_list",
+        url: "/",
         cache: false,
         dataType: "json",
         success: function (result) {

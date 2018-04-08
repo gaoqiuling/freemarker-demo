@@ -1,5 +1,8 @@
 package com.itisacat.freemarker.controller;
 
+import com.itisacat.freemarker.service.services.util.ServiceHelper;
+import com.itisacat.freemarker.support.model.dto.request.BaseRequest;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -14,8 +17,14 @@ import java.util.Date;
 @Controller
 @RequestMapping(value = "index/")
 public class IndexController {
+
+    @Autowired
+    private ServiceHelper serviceHelper;
+
     @RequestMapping(value = "list", method = RequestMethod.GET)
-    public ModelAndView getCarouselPage(ModelMap modelMap) {
+    public ModelAndView getCarouselPage(ModelMap modelMap, BaseRequest request) {
+        String i = serviceHelper.getAnimalService(request).getSound();
+        System.out.println(i);
         modelMap.addAttribute("date", new Date());
         return new ModelAndView("index_list");
     }
